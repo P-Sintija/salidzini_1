@@ -14,7 +14,7 @@
            class="border border-gray-200 rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full"
     >
     <span v-if="errorMessage"
-          class="font-semibold text-sm text-red-400 pb-1 block -mt-2.5"
+          class="text-sm text-red-400 pb-1 block -mt-4"
     >{{ errorMessage }}</span>
 </template>
 
