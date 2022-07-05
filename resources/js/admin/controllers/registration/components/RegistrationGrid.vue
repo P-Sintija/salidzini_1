@@ -89,11 +89,6 @@ export default {
             },
         }
     },
-    mounted() {
-        const modal = document.getElementById('small-modal');
-        modal.classList.add('show')
-        modal.classList.remove('hidden')
-    },
     methods: {
         submit() {
             const data = {
