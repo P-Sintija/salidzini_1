@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Views\AdminLayoutViewComposer;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(AdminLayoutViewComposer::class);
     }
 
     /**
@@ -23,6 +24,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->app->make('view')->composer(['*admin/layouts/main'], AdminLayoutViewComposer::class);
     }
 }
